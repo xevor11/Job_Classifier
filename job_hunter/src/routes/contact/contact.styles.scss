@@ -88,9 +88,9 @@
 	color: white;
 }
 
-.button:disabled {
-	pointer-events: none;
-}
+// .button:disabled {
+// 	pointer-events: none;
+// }
 
 .button:hover {
 	color: #fff;
@@ -99,10 +99,10 @@
 	transform: translateY(-2px);
 }
 
-.button:active {
-	box-shadow: none;
-	transform: translateY(0);
-}
+// .button:active {
+// 	box-shadow: none;
+// 	transform: translateY(0);
+// }
 
 // .button-28 {
 // 	appearance: none;

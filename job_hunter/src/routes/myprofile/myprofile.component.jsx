@@ -16,16 +16,18 @@ class MyProfile extends React.Component {
 	}
 
 	handleSubmit(event) {
-        event.preventDefault();
-        
+		event.preventDefault();
+		alert('We will send you notification as soon as the job is posted!');
 	}
 
 	render() {
 		return (
 			<Fragment>
 				<div className='myprofile-website'>
+					<div className='myprofile-website-spacer'></div>
 					<div className='forms'>
-						DO YOU WANT TO ADD ANY OTHER JOBS NOTIFICATION?
+						<p>DO YOU WANT TO ADD ANY OTHER JOBS NOTIFICATION?</p>
+						<div className='myprofile-website-spacer'></div>
 						<form action='/action_page.php'>
 							<label>
 								Job Type:&nbsp;
@@ -81,14 +83,70 @@ class MyProfile extends React.Component {
 					<div className='my-job-list'>
 						<p className='job-list'>YOUR CURRENT JOB SUBSCRIPTION:</p>
 						<ul className='job-list'>
-                            <li>Google: Software Engineer</li>
-                            <li>Apple: Software Engineer</li>
-                            <li>Amazon: Software Engineer</li>
-                            <li>Meta: Software Engineer</li>
-                            <li>Tesla: Software Engineer</li>
-                            <li>...</li>
-                        </ul>
-                        <p className='explain'>You will receive notification as soon as a new job you choose is posted in the company's website </p>
+							<li>Google: Software Engineer</li>
+							<li>Apple: Software Engineer</li>
+							<li>Amazon: Software Engineer</li>
+							<li>Meta: Software Engineer</li>
+							<li>Tesla: Software Engineer</li>
+							<li>...</li>
+						</ul>
+						<p className='explain'>
+							You will receive notification as soon as a new job you choose is
+							posted in the company's website{' '}
+						</p>
+					</div>
+					<div className='how-receive'>
+						<p>How do you want to receive notification?</p>
+
+						<form action='/action_page.php'>
+							<input type='checkbox' id='Email' name='Email' value='Email' />
+							<label for='Email'> Email </label>
+							<input
+								className='contact-email2'
+								id='contact-user-input-email2'
+								type='email'
+								placeholder='email'
+							/>
+							<br />
+							<input type='checkbox' id='Text' name='Text' value='Text' />
+							<label for='Text'> Text Message</label>
+							<input
+								className='contact-email2'
+								id='contact-user-input-email2'
+								type='email'
+								placeholder='email'
+							/>
+							<br />
+							<input
+								type='checkbox'
+								id='notification'
+								name='notification'
+								value='notification'
+							/>
+							<label for='notification'> Phone Call</label>
+							<input
+								className='contact-email2'
+								id='contact-user-input-email2'
+								type='text'
+								placeholder='text'
+							/>
+
+							<br />
+						</form>
+						<button className='btn' onSubmit={this.handleSubmit}>
+							Send Me Notification!
+						</button>
+						<div className='space-end'></div>
+
+						{/* <label>
+							
+							<select >
+								<option value='Email'>Email</option>
+								<option value='Text Message'>Part Time</option>
+								<option value='Phone Call'>Internship</option>
+								<option value='App notification'>Co-op</option>
+							</select>
+						</label> */}
 					</div>
 				</div>
 			</Fragment>
