@@ -17,3 +17,26 @@ form.addEventListener('submit', (event) => {
     })
     .catch(error => console.error(error));
 });
+
+import { useState, useEffect } from "react";
+
+function App() {
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        fetch("/api/data")
+            .then((response) => response.json())
+            .then((data) => setData(data));
+    }, []);
+
+    return (
+        <div>
+            {data.map((item) => (
+                <div key={item._id}>{item.title}</div>
+            ))}
+        </div>
+    );
+}
+
+export default App;
+
