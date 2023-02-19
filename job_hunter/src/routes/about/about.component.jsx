@@ -9,7 +9,10 @@ class About extends Component {
                 <div className='space1'></div>
 				<h1 className='title'>JOB HUNTER</h1>
 
-				<p className='p1 f1'>
+                <p className='p1 f1'>
+                    Have you have any exprience of being rejected from a company just becuase you applied late?
+                    Job Hunter is there to make sure you are the first one to apply to all the jobs you are intereted in.
+                    <br/>
 					JobHunter is an automated job notification system that keeps job
 					seekers updated with the latest job postings on a company's website.
 					The system utilizes push notifications, email or text message

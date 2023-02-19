@@ -16,7 +16,8 @@ class MyProfile extends React.Component {
 	}
 
 	handleSubmit(event) {
-		event.preventDefault();
+        event.preventDefault();
+        
 	}
 
 	render() {
