@@ -33,9 +33,9 @@ const NavBar = () => {
 					<Link className='nav-link' to='/auth'>
 						SIGN IN/SIGN UP
 					</Link>
-					{/* <Link className='nav-link' to='/auth'>
-						SIGN UP
-					</Link> */}
+					<Link className='nav-link' to='/myprofile'>
+						MY PROFILE
+					</Link>
 				</div>
 
 				{/* {currentUser ? (

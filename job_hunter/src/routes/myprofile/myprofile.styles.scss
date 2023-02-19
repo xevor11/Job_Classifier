@@ -1,0 +1,55 @@
+.myprofile-website {
+    height: 100vh;
+	background-color: #c2e8ea;
+	overflow: auto;
+
+}
+
+.forms {
+	text-align: center;
+}
+
+.forms .btn {
+	margin-top: 5px;
+	position: relative;
+	//   transform: translate(-50%, -50%);
+	//   -ms-transform: translate(-50%, -50%);
+	background-color: #f1f1f1;
+	color: black;
+	font-size: 16px;
+	//   padding: 16px 30px;
+	//   border: none;
+	cursor: pointer;
+	//   border-radius: 5px;
+	//   text-align: center;
+}
+
+.forms .btn:hover {
+	background-color: black;
+	color: white;
+}
+
+input[type='text'],
+select {
+	width: 100%;
+	margin-left: 100px;
+	margin-left: 100px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+.s1 {
+	height: 20px;
+}
+
+.job-list {
+	margin-left: 35%;
+}
+
+.explain{
+    margin-left: 20%;
+}
