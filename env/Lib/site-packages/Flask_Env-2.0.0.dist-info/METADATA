@@ -1,0 +1,131 @@
+Metadata-Version: 2.1
+Name: Flask-Env
+Version: 2.0.0
+Summary: Easily set Flask settings from environment variables
+Home-page: https://github.com/brettlangdon/flask-env
+Author: Brett Langdon
+Author-email: me@brett.is
+License: MIT
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Flask
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+
+Flask-Env
+=========
+
+.. image:: https://badge.fury.io/py/Flask-Env.svg
+    :target: https://badge.fury.io/py/Flask-Env
+.. image:: https://travis-ci.org/brettlangdon/flask-env.svg?branch=master
+    :target: https://travis-ci.org/brettlangdon/flask-env
+
+Easily set `Flask <http://flask.pocoo.org/>`_ settings from environment variables.
+
+The reason for using :code:`flask-env` is to be able to follow the `12-factor app <http://12factor.net/>`_ suggestions for configuring your application.
+
+With :code:`flask-env` you can define your default configuration options in code and very easily override via environment variables.
+
+
+Installation
+~~~~~~~~~~~~
+
+.. code:: bash
+
+   pip install Flask-Env
+
+
+Usage
+~~~~~
+
+With :code:`flask-env` you will define your configuration as an object and load it into your Flask application via `app.config.from_object <http://flask.pocoo.org/docs/0.11/api/#flask.Config.from_object>`_ method.
+
+Python 2
+--------
+
+.. code:: python
+
+   from flask import Flask
+   from flask_env import MetaFlaskEnv
+
+
+   class Configuration(object):
+       __metaclass__ = MetaFlaskEnv
+
+       DEBUG = False
+       PORT = 5000
+
+
+   app = Flask(__name__)
+   app.config.from_object(Configuration)
+
+
+Python 3
+--------
+
+.. code:: python
+
+   from flask import Flask
+   from flask_env import MetaFlaskEnv
+
+
+   class Configuration(metaclass=MetaFlaskEnv):
+       DEBUG = False
+       PORT = 5000
+
+
+   app = Flask(__name__)
+   app.config.from_object(Configuration)
+
+
+Overriding environment variables
+--------------------------------
+
+.. code:: bash
+
+    # Export environment variable for shell session
+    export DEBUG=true
+
+    # Set explicitly for a specific command execution
+    PORT=8000 python app.py
+
+
+Configuring flask-env
+~~~~~~~~~~~~~~~~~~~~~
+
+:code:`flask-env` offers two configuration options to determine how/which environment variables are loaded.
+
+ENV_PREFIX
+  Only consider environment variables that start with this prefix.
+  The prefix will be removed from the environment variable name when setting in the configuration.
+  (default: :code:`''`, example: :code:`ENV_PREFIX = 'MYAPP_'`)
+
+ENV_LOAD_ALL
+  Whether or not to load all environment variables for the configuration object.
+  When :code:`False` only settings predefined on the configuration object are loaded, all others are ignored.
+  When :code:`True` all environment variables defined in :code:`os.environ` will get loaded into your configuration object.
+  (default :code:`False`)
+
+
+Setting configuration values
+----------------------------
+
+You can set the :code:`flask-env` configuration settings directly on your Flask configuration object.
+
+.. code:: python
+
+   from flask_env import MetaFlaskEnv
+
+
+   class Configuration(metaclass=MetaFlaskEnv):
+       ENV_PREFIX = 'MYAPP_'
+       ENV_LOAD_ALL = False
+
+
