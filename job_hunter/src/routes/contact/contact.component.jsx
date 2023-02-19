@@ -3,7 +3,8 @@ import './contact.styles.scss';
 class Contact extends Component {
 	render() {
 		return (
-			<div>
+      <div className='contact-page'>
+        <br/>
 				<h2 className='contact font'>GOT QUESTIONS?</h2>
 				<h4 className='contact font'>
 					Fill out the form and we will contact you!

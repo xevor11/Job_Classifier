@@ -8,10 +8,11 @@ import './home.styles.scss';
 const Home = () => {
 	return (
 		//<HashRouter>
-			<div>
-				{/* <h1>Simple SPA</h1> */}
-				{/* <Navigation /> */}
-				{/* <ul className='header'>
+        
+		<div className='whole-website'>
+			{/* <h1>Simple SPA</h1> */}
+			{/* <Navigation /> */}
+			{/* <ul className='header'>
 					<li>
 						<NavLink to='/'>Home</NavLink>
 					</li>
@@ -22,41 +23,60 @@ const Home = () => {
 						<NavLink to='/contact'>Contact</NavLink>
 					</li>
 				</ul> */}
-				{/* <div className='content'>
+			{/* <div className='content'>
 					<div className='content'>
 						<Route exact path='/' component={Home} />
 						<Route path='/stuff' component={Stuff} />
 						<Route path='/contact' component={Contact} />
 					</div>
 				</div> */}
+            
+			<div className='content'>
+                <h1>JOB HUNTER</h1>
+                <br/>
+              
 
-				<div>
-					<h2 className='title'>HELLO</h2>
-					<h4 className='home-title'>
-						We help you land your dream offer!
-                </h4>
-                <p className='home-content'>
-                    Be the first one to apply for any job you like.
-                    <br />
-                    <br/>
-                    Join us and start your recruiting journey.
-                    <br />
-                    We help to make your recruiting 100 times easier.
+				<h3>We help you land your dream offer!</h3>
+			</div>
+			<div className='box'>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
 
-                </p>
-                <br />
+			<div className='content2'>
+				<h2 className='title'>HELLO</h2>
+				<h4 className='home-title'>We help you land your dream offer!</h4>
+				<p className='home-content'>
+					Be the first one to apply for any job you like.
+					<br />
+					<br />
+					Join us and start your recruiting journey.
+					<br />
+					We help to make your recruiting 100 times easier.
+				</p>
+				<br />
 
-                <div className='intro'>
-                    <p style={{ textAlign: "center" }}>WHO IS JOB HUNTER?</p>
+				<div className='intro'>
+					<p style={{ textAlign: 'center' }}>WHO IS JOB HUNTER?</p>
 
-                    <p style={{ textAlign: "left" }}>
-                        JobHunter is an automated job notification system that keeps job seekers updated with the latest job postings on a company's website. The system utilizes push notifications, email or text message notifications to notify users about new job postings. JobHunter aims to solve the problem of missing out on job opportunities due to late application or not being informed on time.
-                    </p>
-
-                </div>
-
+					<p style={{ textAlign: 'left' }}>
+						JobHunter is an automated job notification system that keeps job
+						seekers updated with the latest job postings on a company's website.
+						The system utilizes push notifications, email or text message
+						notifications to notify users about new job postings. JobHunter aims
+						to solve the problem of missing out on job opportunities due to late
+						application or not being informed on time.
+					</p>
 				</div>
 			</div>
+		</div>
 		//</HashRouter>
 	);
 };

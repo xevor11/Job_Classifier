@@ -10,7 +10,7 @@
 	//   align-items: center;
 	display: block;
 	margin: 0 auto;
-    width: 250px;
+	width: 250px;
 }
 
 .contact-question {
@@ -22,3 +22,9 @@
 // .font{
 //     font-family: Monaco;
 // }
+
+.contact-page {
+	background-color: #d1f2f3;
+	height: 100vh;
+    overflow: auto;
+}
